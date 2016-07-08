@@ -102,6 +102,8 @@ extension FlickrPhotosViewController  {
         cell.backgroundColor = UIColor.blackColor()
         //3
         cell.photoImageView.image = flickrPhoto.thumbnail
+        cell.photoDetailLabel.sizeToFit()
+        cell.photoDetailLabel.text = flickrPhoto.title
         
         return cell
     }
