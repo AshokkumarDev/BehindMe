@@ -116,7 +116,8 @@ class Flickr {
             
             let photosContainer = resultsDictionary!["photos"] as! NSDictionary
             let photosReceived = photosContainer["photo"] as! [NSDictionary]
-            
+        
+        print(photosReceived)
             let flickrPhotos : [FlickrPhoto] = photosReceived.map {
                 photoDictionary in
                 

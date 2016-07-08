@@ -105,4 +105,26 @@ extension FlickrPhotosViewController  {
         
         return cell
     }
+    
+    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        
+        switch kind {
+            
+        case UICollectionElementKindSectionHeader:
+            
+            let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Header", forIndexPath: indexPath) as! CollectionHeaderReusableView
+            headerView.dateLabel.text = searches[indexPath.section].searchTerm
+            return headerView
+            
+        case UICollectionElementKindSectionFooter:
+            let footerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Footer", forIndexPath: indexPath) 
+            
+            footerView.backgroundColor = UIColor.greenColor();
+            return footerView
+            
+        default:
+            
+            assert(false, "Unexpected element kind")
+        }
+    }
 }

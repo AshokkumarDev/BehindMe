@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAF8783A1D2FA53F00A92BE0 /* CollectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF878391D2FA53F00A92BE0 /* CollectionHeaderReusableView.swift */; };
 		AAFC828B1D1A6FFD00A28F4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFC82891D1A6FFD00A28F4E /* Assets.xcassets */; };
 		AAFC828C1D1A6FFD00A28F4E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAFC828A1D1A6FFD00A28F4E /* Info.plist */; };
 		AAFC828E1D1A700900A28F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC828D1D1A700900A28F4E /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AAF878391D2FA53F00A92BE0 /* CollectionHeaderReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionHeaderReusableView.swift; path = Views/CollectionHeaderReusableView.swift; sourceTree = "<group>"; };
 		AAFC82701D1A651400A28F4E /* BehindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BehindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFC82891D1A6FFD00A28F4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		AAFC828A1D1A6FFD00A28F4E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				AAFC829D1D1D29B300A28F4E /* FlickrPhotoCell.swift */,
+				AAF878391D2FA53F00A92BE0 /* CollectionHeaderReusableView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				AAFC82961D1D097400A28F4E /* FlickrPhotosViewController.swift in Sources */,
 				AAFC82941D1A702700A28F4E /* ViewController.swift in Sources */,
+				AAF8783A1D2FA53F00A92BE0 /* CollectionHeaderReusableView.swift in Sources */,
 				AAFC829E1D1D29B300A28F4E /* FlickrPhotoCell.swift in Sources */,
 				AAFC828E1D1A700900A28F4E /* AppDelegate.swift in Sources */,
 				AAFC829B1D1D0B9F00A28F4E /* FlickrSearcher.swift in Sources */,
