@@ -14,7 +14,7 @@ class FlickrPhotosViewController: UICollectionViewController {
 
     
     private let reuseIdentifier = "FlickrCell"
-    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    private let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
     
     private var searches = [FlickrSearchResults]()
     private let flickr = Flickr()
@@ -66,12 +66,12 @@ extension FlickrPhotosViewController : UICollectionViewDelegateFlowLayout {
         
         let flickrPhoto =  photoForIndexPath(indexPath)
         //2
-        if var size = flickrPhoto.thumbnail?.size {
+        /*if var size = flickrPhoto.thumbnail?.size {
             size.width += 10
             size.height += 10
             return size
-        }
-        return CGSize(width: 100, height: 100)
+        }*/
+        return CGSize(width: 200, height: 200)
     }
     
     //3
@@ -111,7 +111,7 @@ extension FlickrPhotosViewController  {
         return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+   /* override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         
         switch kind {
             
@@ -131,7 +131,7 @@ extension FlickrPhotosViewController  {
             
             assert(false, "Unexpected element kind")
         }
-    }
+    }*/
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell:FlickrPhotoCell = collectionView.cellForItemAtIndexPath(indexPath) as! FlickrPhotoCell
