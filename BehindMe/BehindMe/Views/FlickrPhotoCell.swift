@@ -13,6 +13,9 @@ class FlickrPhotoCell: UICollectionViewCell {
     @IBOutlet var photoDetailLabel: UILabel!
     @IBOutlet var photoImageView: UIImageView!
     
+    @IBOutlet var photoDetailView: UIView!
+    
+    var isFlipped:Bool!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

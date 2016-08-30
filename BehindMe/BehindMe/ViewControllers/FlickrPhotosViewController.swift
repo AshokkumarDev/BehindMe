@@ -101,6 +101,9 @@ extension FlickrPhotosViewController  {
         let flickrPhoto = photoForIndexPath(indexPath)
         cell.backgroundColor = UIColor.blackColor()
         //3
+        cell.photoDetailView.hidden = true
+        cell.photoImageView.hidden = false
+        cell.isFlipped = false
         cell.photoImageView.image = flickrPhoto.thumbnail
         cell.photoDetailLabel.sizeToFit()
         cell.photoDetailLabel.text = flickrPhoto.title
@@ -128,5 +131,43 @@ extension FlickrPhotosViewController  {
             
             assert(false, "Unexpected element kind")
         }
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let cell:FlickrPhotoCell = collectionView.cellForItemAtIndexPath(indexPath) as! FlickrPhotoCell
+        self.flipView(cell)
+        //cell.photoImageView.hidden = true
+        //cell.photoDetailView.hidden = false
+    }
+    
+    func flipView(cellToFlick: FlickrPhotoCell)
+    {
+        let transitionOptions: UIViewAnimationOptions = [.TransitionFlipFromTop, .ShowHideTransitionViews]
+        
+        UIView.transitionWithView(cellToFlick.photoImageView, duration: 1.0, options: transitionOptions, animations: {
+            if(!cellToFlick.isFlipped)
+            {
+                cellToFlick.photoImageView.hidden = true
+                
+            }
+            else
+            {
+               
+               cellToFlick.photoImageView.hidden = false
+            }
+        }, completion: nil)
+        
+        UIView.transitionWithView( cellToFlick.photoDetailView, duration: 1.0, options: transitionOptions, animations: {
+            if(!cellToFlick.isFlipped)
+            {
+                cellToFlick.photoDetailView.hidden = false
+                cellToFlick.isFlipped = true
+            }
+            else
+            {
+                cellToFlick.photoDetailView.hidden = true
+                cellToFlick.isFlipped = false
+            }
+        }, completion: nil)
     }
 }

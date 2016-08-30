@@ -83,6 +83,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="photoDetailLabel" destination="mr9-ec-OT5" id="vjN-iu-khY"/>
+                                    <outlet property="photoDetailView" destination="Fbd-gT-fTU" id="d97-xT-hFG"/>
                                     <outlet property="photoImageView" destination="XOx-nV-Jg7" id="DAZ-3X-Ypj"/>
                                 </connections>
                             </collectionViewCell>
@@ -133,7 +134,7 @@
                     <navigationItem key="navigationItem" id="29t-d6-5UL">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="gTU-5f-VQl">
-                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" id="ZP5-ep-gfd">
+                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" id="ZP5-ep-gfd">
                                 <rect key="frame" x="16" y="7" width="290" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
